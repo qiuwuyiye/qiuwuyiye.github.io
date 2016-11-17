@@ -88,7 +88,7 @@
 <meta property="og:title" content="Spark小白的学习之路">
 <meta property="og:url" content="http://yoursite.com/2016/11/17/spark小白的学习之路/index.html">
 <meta property="og:site_name" content="Dare To Think">
-<meta property="og:updated_time" content="2016-11-17T10:44:47.000Z">
+<meta property="og:updated_time" content="2016-11-17T11:05:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark小白的学习之路">
 
@@ -309,27 +309,26 @@
 
       
         <!-- toc -- >
-
 # 背景
 
-最近好几个同学问我怎么开始学习spark, 虽说对spark的认识也十分有限，但是好歹接触spark也有一年半了，所以记录下自己的学习历程以便初入门者不至于最后“从入门到放弃”。想想当初自己抱着“hadoop权威指南”怀着一定要跟hadoop死磕到底的悲壮心情，不仅哑然失笑。刚开始的时候，都会觉得高大上的东西不大好懂，实则不然。刚开始大都是从看书开始的，理论知识又会让人觉得晦涩，顿时愈发觉得这些分布式框架高深莫测了。好在我学习spark没有那么痛苦，甚至可以说十分热爱这个分布式平台，遂分享下我的学习心得。
+&emsp;&emsp;最近好几个同学问我怎么开始学习spark, 虽说对spark的认识也十分有限，但是好歹接触spark也有一年半了，所以记录下自己的学习历程以便初入门者不至于最后“从入门到放弃”。想想当初自己抱着“hadoop权威指南”怀着一定要跟hadoop死磕到底的悲壮心情，不仅哑然失笑。刚开始的时候，都会觉得高大上的东西不大好懂，实则不然。刚开始大都是从看书开始的，理论知识又会让人觉得晦涩，顿时愈发觉得这些分布式框架高深莫测了。好在我学习spark没有那么痛苦，甚至可以说十分热爱这个分布式平台，遂分享下我的学习心得。
 
 # 环境
 
 ## spark
 
-下载spark稳定版的binary安装包，按照官方文档配置下spark_env.sh等配置文件
-tutorial: spark-tutorial
-spark programming guide: programming-guide
-上面的教程直接在spark-shell中运行(不用 IDE)就好了
-先看一遍试一遍有一个直观的感受
+&emsp;&emsp;下载spark稳定版的binary安装包，按照官方文档配置下spark_env.sh等配置文件。
++ tutorial: spark-tutorial
++ spark programming guide: programming-guide
+上面的教程直接在spark-shell中运行(不用 IDE)就好了。
+先看一遍试一遍有一个直观的感受。
 ## IDE
 
-intelliJ IDEA，该IDE功能十分强大，不仅集成了terminal, scala 编译器，sbt， 版本控制等, 还有代码美化，自动补全的功能。
+&emsp;&emsp;intelliJ IDEA，该IDE功能十分强大，不仅集成了terminal, scala 编译器，sbt， 版本控制等, 还有代码美化，自动补全的功能。
 安装intelliJ IDEA, 然后安装sbt以及scala的编译器。
 <img src="/images/demo.png" width="500" height="400" alt="error" align="center"/>
-点击下面的plugin，搜索并安装set以及scala 插件。不过sbt的控件有时候会安装失败，如果多次失败，建议下载下来手动安装。至于sbt是做什么的，通俗点儿理解就是sbt是管理项目依赖的一个工具，spark程序依赖很多spark的jar包，如果我们配置了build.sbt那么sbt会自动去远程库中帮我们下载这些jar包，放在我们library中。sbt跟maven功能相同，但是前者服务于scala，后者主要用在java项目中。
-下载完了控件，接下来配置build.sbt文件。你在idea中新建一个项目的时候，首先项目下面就会出现一个build.sbt文件。如果只是简单的scala程序，不需要做额外配置，倘若是spark程序，可以按照如下格式添加依赖。
+&emsp;&emsp;点击下面的plugin，搜索并安装set以及scala 插件。不过sbt的控件有时候会安装失败，如果多次失败，建议下载下来手动安装。至于sbt是做什么的，通俗点儿理解就是sbt是管理项目依赖的一个工具，spark程序依赖很多spark的jar包，如果我们配置了build.sbt那么sbt会自动去远程库中帮我们下载这些jar包，放在我们library中。sbt跟maven功能相同，但是前者服务于scala，后者主要用在java项目中。
+&emsp;&emsp;下载完了控件，接下来配置build.sbt文件。你在idea中新建一个项目的时候，首先项目下面就会出现一个build.sbt文件。如果只是简单的scala程序，不需要做额外配置，倘若是spark程序，可以按照如下格式添加依赖。
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">name := &quot;example&quot;</div><div class="line"></div><div class="line">version := &quot;0.1&quot;</div><div class="line"></div><div class="line">scalaVersion := &quot;2.10.4&quot;</div><div class="line"></div><div class="line">libraryDependencies ++= Seq(</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-graphx&quot; % &quot;1.5.2&quot;,</div><div class="line">  “org.apache.spark&quot; %% &quot;spark-streaming&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-mllib&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-sql&quot; % &quot;1.5.2&quot; )</div></pre></td></tr></table></figure>
 <hr>
