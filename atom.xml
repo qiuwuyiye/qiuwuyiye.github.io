@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-17T12:39:20.000Z</updated>
+  <updated>2016-11-17T12:32:56.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,34 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>About</title>
-    <link href="http://yoursite.com/2016/11/17/About/"/>
-    <id>http://yoursite.com/2016/11/17/About/</id>
-    <published>2016-11-17T12:30:16.000Z</published>
-    <updated>2016-11-17T12:39:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>&#x2003;&#x2003;Hi, I&#x2019;m liping. If you want to get in touch with me you can send me an email.</p>
-<h1 id="resume"><a href="#Resume" class="headerlink" title="Resume"></a>Resume</h1><p>&#x2003;&#x2003;Now, i&#x2019;m actively looking for a job, the target position is data mining algorithm engineer.</p>
-<center><embed src="/images/resume.pdf" width="600" height="800"></center>
-
-<h1 id="programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h1><p>&#x2003;&#x2003;I&#x2019;m a graduate student of Institute of Computing Technology.</p>
-<p>&#x2003;&#x2003;I didn&#x2019;t really start programming before I became a College student. Now, I have been working with several   students in the lab to develop a graphic machine learning platform which is call BDA Studio. It&#x2019;s full of challenge, but it&#x2019;s an interesting and promising project. If you want to know more about it, you can go to BDA Studio for more information.</p>
-<p>&#x2003;&#x2003;Python is my favourite language, whose simplicity and powerfulness fascinates me. C++ is great, actually it&#x2019;s the first programming language that i have learned. Scala is a new language which is very friendly and is very helpful when i&#x2019;m programming on spark platform, i enjoy using it but it&#x2019;s far from skilled.</p>
-<h1 id="internship"><a href="#Internship" class="headerlink" title="Internship"></a>Internship</h1><p>&#x2003;&#x2003;I had an internship at Baidu company in Fcr_model which is responsible for the performance of  CTR(click through rate) model used on Baidu&#x2019;s online advertising system and is is undoubtedly one of the  heart department. I was mainly engaged in feature surveying, feature extraction, model evaluation tasks in the department, one of the model i participated in was finally put in use on the Baidu Advertising System. It&#x2019;s the first internship for me, i have learned a lot about big data processing techniques (like hadoop and map reduce) and feature engineerings.</p>
-<h1 id="hobbies"><a href="#Hobbies" class="headerlink" title="Hobbies"></a>Hobbies</h1><p>&#x2003;&#x2003;I usually play  badminton, table tennis, i also like swimming. And i&#x2019;m fond of photography, especially Portrait Photography.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;#x2003;&amp;#x2003;Hi, I&amp;#x2019;m liping. If you want to get in touch with me you can send me an email.&lt;/p&gt;
-&lt;h1 id=&quot;resume&quot;&gt;&lt;a href=&quot;#Resume
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>岛上书店</title>
