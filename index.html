@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/17/hello-world/" data-id="civm0rync0000qkw3tf99jh1b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/17/hello-world/" data-id="civm0rync0000qkw3tf99jh1b" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -129,17 +129,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Bagging、Blending、Boosting-and-Stacking"><a href="#Bagging、Blending、Boosting-and-Stacking" class="headerlink" title="Bagging、Blending、Boosting and Stacking"></a>Bagging、Blending、Boosting and Stacking</h1><p>[toc]</p>
-<p>##背景</p>
-<p>模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and Stacking四个概率的区别于联系。</p>
-<p>##Ensemble</p>
-<p>###融合的优点</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and Stacking四个概率的区别于联系。</p>
+<h2 id="Ensemble"><a href="#Ensemble" class="headerlink" title="Ensemble"></a>Ensemble</h2><p>###融合的优点</p>
 <ul>
 <li>从统计模型的⾓角度来讲,单个模型可能会因为误选导致性能不好</li>
 <li>从计算⾓角度讲,学习算法往往会 陷⼊入局部最⼩小化,局部极⼩小点的 泛化性能可能很糟</li>
 <li>从表⽰示⽅方⾯面来看,某些学习任务 的真实假设可能不在当前学习算 法所考虑的假设空间中,此时使 ⽤用单学习器肯定⽆无效</li>
 </ul>
-<p>###两阶段</p>
-<p>我们一般提到的模型融合也叫Ensemble，包含这几个阶段：</p>
+<h3 id="两阶段"><a href="#两阶段" class="headerlink" title="两阶段"></a>两阶段</h3><p>我们一般提到的模型融合也叫Ensemble，包含这几个阶段：</p>
 <ul>
 <li>分不同的训练集</li>
 <li>单个模型训练</li>
@@ -148,28 +145,24 @@
 </li>
 </ul>
 <p>###区别</p>
-<p>####Bagging</p>
-<ul>
+<h4 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h4><ul>
 <li>多模型的训练相互独立，可以并行</li>
 <li>元模型都是由同种算法生成的，也叫同构融合</li>
 <li>主要利用样本的多样性来增加模型的多样性</li>
 <li>典型例子是随机森林算法(random forest), 但是RF中不光存在样本采样还会有特征采样。</li>
 </ul>
-<p>####Blending</p>
-<ul>
+<h4 id="Blending"><a href="#Blending" class="headerlink" title="Blending"></a>Blending</h4><ul>
 <li>多模型的训练相互独立，可以并行</li>
 <li>元模型都是由同种算法生成的，也叫异构融合</li>
 <li>主要利用样本的多样性来增加模型的多样性</li>
 </ul>
-<p>####Boosting</p>
-<ul>
+<h4 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h4><ul>
 <li>模型之间的训练是相互关联的，前一个模型的训练结果会影响后一个模型训练样本的权重。模型之间不能并行。</li>
 <li>模型之间不能不能异构融合</li>
 <li>Boosting最后会根据模型的误差等信息来进行融合，不能采用其他的融合方法</li>
 <li>典型代表是(Adaboost,  GBDT)</li>
 </ul>
-<p>####Stacking</p>
-<ul>
+<h4 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h4><ul>
 <li>将元模型的学到的结果再学习一遍</li>
 <li>元模型可以使用不同的训练方法</li>
 <li>两层学习</li>
@@ -195,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -230,7 +223,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -255,7 +248,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Li Ping<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
