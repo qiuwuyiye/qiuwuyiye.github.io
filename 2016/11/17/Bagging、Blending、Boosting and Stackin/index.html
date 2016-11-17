@@ -5,20 +5,20 @@
   
   <title>Bagging、Blending、Boosting and Stacking | Dare To Think</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Bagging、Blending、Boosting and Stacking[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里">
+  <meta name="description" content="[toc]
+背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bagging、Blending、Boosting and Stacking">
 <meta property="og:url" content="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/index.html">
 <meta property="og:site_name" content="Dare To Think">
-<meta property="og:description" content="Bagging、Blending、Boosting and Stacking[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里">
+<meta property="og:description" content="[toc]
+背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
 <meta property="og:image" content="http://yoursite.com/./images/ensemble.png">
-<meta property="og:updated_time" content="2016-11-17T07:51:55.000Z">
+<meta property="og:updated_time" content="2016-11-17T07:52:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bagging、Blending、Boosting and Stacking">
-<meta name="twitter:description" content="Bagging、Blending、Boosting and Stacking[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里">
+<meta name="twitter:description" content="[toc]
+背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
 <meta name="twitter:image" content="http://yoursite.com/./images/ensemble.png">
   
     <link rel="alternate" href="/atom.xml" title="Dare To Think" type="application/atom+xml">
@@ -57,9 +57,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -90,7 +90,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Bagging、Blending、Boosting-and-Stacking"><a href="#Bagging、Blending、Boosting-and-Stacking" class="headerlink" title="Bagging、Blending、Boosting and Stacking"></a>Bagging、Blending、Boosting and Stacking</h1><p>[toc]</p>
+        <p>[toc]</p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and Stacking四个概率的区别于联系。</p>
 <h2 id="Ensemble"><a href="#Ensemble" class="headerlink" title="Ensemble"></a>Ensemble</h2><h3 id="融合的优点"><a href="#融合的优点" class="headerlink" title="融合的优点"></a>融合的优点</h3><ul>
 <li>从统计模型的⾓角度来讲,单个模型可能会因为误选导致性能不好</li>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
@@ -156,7 +156,7 @@
 <nav id="article-nav">
   
     <a href="/2016/11/17/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           Hello World
@@ -179,7 +179,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
     </div>
@@ -189,7 +189,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a>
     </div>
@@ -208,7 +208,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -233,7 +233,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Li Ping<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
