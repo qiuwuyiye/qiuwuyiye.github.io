@@ -84,12 +84,42 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dare To Think">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="[toc]
+
+
+Spark-sql &amp;#x8DDF;hive
+Spark-sql &amp;#x8DDF;mysql
+&amp;#x8FDB;&amp;#x4E00;&amp;#x6B65;&amp;#x7684;&amp;#x5DE5;&amp;#x4F5C;
+
+
+Spark-sql &amp;#x8DDF;hive1234567891011121314151617181920212223242526case class Param(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spark-sql与异源数据库交互">
+<meta property="og:url" content="http://yoursite.com/2016/11/17/spark-sql与异源数据库交互/index.html">
 <meta property="og:site_name" content="Dare To Think">
+<meta property="og:description" content="[toc]
+
+
+Spark-sql &amp;#x8DDF;hive
+Spark-sql &amp;#x8DDF;mysql
+&amp;#x8FDB;&amp;#x4E00;&amp;#x6B65;&amp;#x7684;&amp;#x5DE5;&amp;#x4F5C;
+
+
+Spark-sql &amp;#x8DDF;hive1234567891011121314151617181920212223242526case class Param(">
+<meta property="og:image" content="http://yoursite.com/./images/error01.jpg">
+<meta property="og:updated_time" content="2016-11-17T08:28:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dare To Think">
+<meta name="twitter:title" content="spark-sql与异源数据库交互">
+<meta name="twitter:description" content="[toc]
+
+
+Spark-sql &amp;#x8DDF;hive
+Spark-sql &amp;#x8DDF;mysql
+&amp;#x8FDB;&amp;#x4E00;&amp;#x6B65;&amp;#x7684;&amp;#x5DE5;&amp;#x4F5C;
+
+
+Spark-sql &amp;#x8DDF;hive1234567891011121314151617181920212223242526case class Param(">
+<meta name="twitter:image" content="http://yoursite.com/./images/error01.jpg">
 
 
 
@@ -117,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/17/spark-sql与异源数据库交互/"/>
 
 
 
 
 
-  <title> Dare To Think </title>
+  <title> spark-sql与异源数据库交互 | Dare To Think </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,9 +174,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +253,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -260,10 +288,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/17/spark-sql与异源数据库交互/" itemprop="url">
-                  spark-sql与异源数据库交互
-                </a>
+                spark-sql与异源数据库交互
               
             
           </h1>
@@ -312,9 +337,7 @@
       
 
       
-        
-          
-            <p>[toc]</p>
+        <p>[toc]</p>
 <!-- toc -->
 <ul>
 <li><a href="#spark-sql-&#x8DDF;hive">Spark-sql &#x8DDF;hive</a></li>
@@ -336,16 +359,20 @@
 </ul>
 <h1 id="&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;"><a href="#&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;" class="headerlink" title="&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;"></a>&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;</h1><p>hive&#x7684;&#x52A8;&#x6001;&#x8FDE;&#x63A5;&#x8FD8;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E3B;&#x8981;&#x662F;&#x5BF9;hive&#x7F3A;&#x4E4F;&#x5FC5;&#x8981;&#x7684;&#x4E86;&#x89E3;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4F1A;&#x770B;&#x770B;spark-sql&#x8DDF;hive&#x662F;&#x600E;&#x4E48;&#x6574;&#x5408;&#x7684;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7ED9;&#x89E3;&#x51B3;&#x6389;&#x3002;</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -354,23 +381,34 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -378,6 +416,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -397,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -444,6 +495,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spark-sql-跟hive"><span class="nav-number">1.</span> <span class="nav-text">Spark-sql 跟hive</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spark-sql-跟mysql"><span class="nav-number">2.</span> <span class="nav-text">Spark-sql 跟mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进一步的工作"><span class="nav-number">3.</span> <span class="nav-text">进一步的工作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -542,6 +609,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
