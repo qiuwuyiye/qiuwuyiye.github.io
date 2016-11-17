@@ -7,7 +7,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -123,7 +123,7 @@
 
 
 
-  <title> Dare To Think </title>
+  <title> Dare To Think </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -226,6 +226,166 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/17/spark小白的学习之路/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Li Ping">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Dare To Think">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Dare To Think" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/17/spark小白的学习之路/" itemprop="url">
+                  Spark小白的学习之路
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-17T17:43:38+08:00">
+                2016-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- toc -- >
+# 背景
+
+&emsp;&emsp;最近好几个同学问我怎么开始学习spark, 虽说对spark的认识也十分有限，但是好歹接触spark也有一年半了，所以记录下自己的学习历程以便初入门者不至于最后“从入门到放弃”。想想当初自己抱着“hadoop权威指南”怀着一定要跟hadoop死磕到底的悲壮心情，不仅哑然失笑。刚开始的时候，都会觉得高大上的东西不大好懂，实则不然。刚开始大都是从看书开始的，理论知识又会让人觉得晦涩，顿时愈发觉得这些分布式框架高深莫测了。好在我学习spark没有那么痛苦，甚至可以说十分热爱这个分布式平台，遂分享下我的学习心得。
+
+# 环境
+
+## spark
+
+&emsp;&emsp;下载spark稳定版的binary安装包，按照官方文档配置下spark_env.sh等配置文件。
++ tutorial: spark-tutorial
++ spark programming guide: programming-guide
+上面的教程直接在spark-shell中运行(不用 IDE)就好了。
+先看一遍试一遍有一个直观的感受。
+## IDE
+
+&emsp;&emsp;intelliJ IDEA，该IDE功能十分强大，不仅集成了terminal, scala 编译器，sbt， 版本控制等, 还有代码美化，自动补全的功能。
+安装intelliJ IDEA, 然后安装sbt以及scala的编译器。
+<img src="/images/demo.png" width="500" height="400" alt="error" align="center"/>
+&emsp;&emsp;点击下面的plugin，搜索并安装set以及scala 插件。不过sbt的控件有时候会安装失败，如果多次失败，建议下载下来手动安装。至于sbt是做什么的，通俗点儿理解就是sbt是管理项目依赖的一个工具，spark程序依赖很多spark的jar包，如果我们配置了build.sbt那么sbt会自动去远程库中帮我们下载这些jar包，放在我们library中。sbt跟maven功能相同，但是前者服务于scala，后者主要用在java项目中。
+&emsp;&emsp;下载完了控件，接下来配置build.sbt文件。你在idea中新建一个项目的时候，首先项目下面就会出现一个build.sbt文件。如果只是简单的scala程序，不需要做额外配置，倘若是spark程序，可以按照如下格式添加依赖。
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">name := &quot;example&quot;</div><div class="line"></div><div class="line">version := &quot;0.1&quot;</div><div class="line"></div><div class="line">scalaVersion := &quot;2.10.4&quot;</div><div class="line"></div><div class="line">libraryDependencies ++= Seq(</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-graphx&quot; % &quot;1.5.2&quot;,</div><div class="line">  “org.apache.spark&quot; %% &quot;spark-streaming&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-mllib&quot; % &quot;1.5.2&quot;,</div><div class="line">  &quot;org.apache.spark&quot; %% &quot;spark-sql&quot; % &quot;1.5.2&quot; )</div></pre></td></tr></table></figure>
+<hr>
+<p>&emsp;&emsp;上面我添加了5个依赖，这5个包都是spark生态的主要部门，分别是spark-core，这个只用用到RDD都需要使用，spark-graphx提供图数据的存储以及计算方面的API，spark-mllib中包含了一定数量的机器学习算法API，spark-streaming针对流式计算，spark-sql是spark生态不可低估的生力军，因为spark-sql支持多种数据源，可以处理hive，mysql中的数据，轻松实现ETL的操作。<br>上面的依赖包并不是越多越好，因为sbt每次创建新项目都会要下载这些依赖，一来比较慢，二来最后的jar包会很大。<br>语言, scala. 虽说spark支持python, R, Java, 但是一开始学习的时候用的就是scala就没觉得scala是学习障碍，况且scala的函数式编程功能在写map, reduce函数的时候真的十分便捷。另外scala跟java可以混合编程，scala文件中可以import java的包。<br>学习要点</p>
+<h2 id="driver跟executor的区别"><a href="#driver跟executor的区别" class="headerlink" title="driver跟executor的区别"></a>driver跟executor的区别</h2><p>&emsp;&emsp;简单理解，driver运行主程序，如果有map等操作，都交给executor来执行。<br>分布式计算框架的核心思想就是要找可以并行的部分，然后将这些部分分给其他的计算机来执行，以此来提升运行的效率。想到这里看到其他的概念，就会清晰很多。当初碰到driver，executor, master, worker这些概念的时候也是一头雾水。<br>transformation 跟 action</p>
+<p>&emsp;&emsp;transformation跟action都是spark提供给RDD的API的分类。RDD提供给开发者的API有:</p>
+<ul>
+<li>transformation: map, join, groupby, filter, flatmap, union, intersection, distinct……</li>
+<li>action: reduce, sum, first, top, collect, take……</li>
+<li>spark是内存计算，也是懒惰计算，就是所有的计算资源都尽可能load进内存中，transformation不会立即执行，但是出现action以后该action依赖的transformation才会一起执行。spark在运行期间会一直保存RDD的依赖信息，也叫血缘（lineage)。当然如果是迭代算法，需要好好考虑怎么优化，都则会出现OOM。</li>
+</ul>
+<h2 id="简单的spark程序-wordcount"><a href="#简单的spark程序-wordcount" class="headerlink" title="简单的spark程序 wordcount"></a>简单的spark程序 wordcount</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.spark.<span class="type">SparkConf</span></div><div class="line"><span class="keyword">import</span> org.apache.spark.<span class="type">SparkContext</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">object</span> <span class="title">wordcount</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</div><div class="line">    <span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">"wordcount"</span>).setMaster(<span class="string">"local[2]"</span>)</div><div class="line">    <span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</div><div class="line">    sc.textFile(<span class="string">"text"</span>).flatMap&#123; s =&gt; s.split(<span class="string">"\\s+"</span>)&#125;.map&#123;word =&gt; (word, <span class="number">1</span>)&#125;.reduceByKey(_ + _).foreach(println)</div><div class="line">    sc.stop()</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;处理小数据量的程序在idea就可以胜任(指定master为local)， 数据量很大的情况可以打成jar包上传到spark集群中运行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">output=hdfs://bda00:8020/user/xx/hive_table</div><div class="line">table=test</div><div class="line"></div><div class="line">function run &#123;</div><div class="line">    hadoop fs -rm $output</div><div class="line">    spark-submit \</div><div class="line">        --executor-memory 5G \</div><div class="line">        --master &quot;spark://hostname:7077&quot; \</div><div class="line">        --class &quot;sparksql.reader.HiveReader&quot; \</div><div class="line">        --conf &quot;spark.cores.max=10&quot; \</div><div class="line">        jarName.jar \</div><div class="line">        --output_pt $output \</div><div class="line">        --table src </div><div class="line">    &#125;   </div><div class="line">run</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个jar包之前的是spark环境参数，例如executor的core数目，内存大小等，当然这个还可以传入依赖的jar包等。具体使用详见, spark_submit_application.–class指定spark程序主类。</p>
+<p>&emsp;&emsp;spark程序的参数是使用了scopt来实现读参数的，这个看起来比较美观，还可以进行参数检查，简单的参考java程序的传参方法（貌似就是jar包后面空格隔开)就好。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;实践是了解spark最直接最有效的学习方式，如果想进一步了解spark，实践这些文档中的例子还远远不够，这个时候再看一些相关的技术书籍或者博客肯定是非常必要的。当我们对spark有了一定的认识，再了解它就不会那么恐惧了。</p>
+<p>&emsp;&emsp;另外补充一些非常不错的进阶资料，当然最好的还是官方文档：</p>
+<ul>
+<li><a href="http://dongxicheng.org/framework-on-yarn/apache-spark-shuffle-details">http://dongxicheng.org/framework-on-yarn/apache-spark-shuffle-details</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_4d1426660102v3pt.html">http://blog.sina.com.cn/s/blog_4d1426660102v3pt.html</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_4d1426660102v5u2.html">http://blog.sina.com.cn/s/blog_4d1426660102v5u2.html</a></li>
+</ul>
+-->
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -717,7 +877,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -854,7 +1014,24 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
