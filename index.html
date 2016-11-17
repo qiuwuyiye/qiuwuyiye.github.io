@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/17/hello-world/" data-id="civm0rync0000qkw3tf99jh1b" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/11/17/hello-world/" data-id="civm0rync0000qkw3tf99jh1b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,8 +130,7 @@
       
         <h1 id="Bagging、Blending、Boosting-and-Stacking"><a href="#Bagging、Blending、Boosting-and-Stacking" class="headerlink" title="Bagging、Blending、Boosting and Stacking"></a>Bagging、Blending、Boosting and Stacking</h1><p>[toc]</p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and Stacking四个概率的区别于联系。</p>
-<h2 id="Ensemble"><a href="#Ensemble" class="headerlink" title="Ensemble"></a>Ensemble</h2><p>###融合的优点</p>
-<ul>
+<h2 id="Ensemble"><a href="#Ensemble" class="headerlink" title="Ensemble"></a>Ensemble</h2><h3 id="融合的优点"><a href="#融合的优点" class="headerlink" title="融合的优点"></a>融合的优点</h3><ul>
 <li>从统计模型的⾓角度来讲,单个模型可能会因为误选导致性能不好</li>
 <li>从计算⾓角度讲,学习算法往往会 陷⼊入局部最⼩小化,局部极⼩小点的 泛化性能可能很糟</li>
 <li>从表⽰示⽅方⾯面来看,某些学习任务 的真实假设可能不在当前学习算 法所考虑的假设空间中,此时使 ⽤用单学习器肯定⽆无效</li>
@@ -144,8 +143,7 @@
 
 </li>
 </ul>
-<p>###区别</p>
-<h4 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h4><ul>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h4><ul>
 <li>多模型的训练相互独立，可以并行</li>
 <li>元模型都是由同种算法生成的，也叫同构融合</li>
 <li>主要利用样本的多样性来增加模型的多样性</li>
@@ -168,8 +166,7 @@
 <li>两层学习</li>
 </ul>
 <blockquote>
-<p><strong>Bagging、Blending、Boosting发生在元模型训练阶段，都是元模型训练的一些策略</strong><br><strong>Stacking发生在模型融合阶段，就是当元模型都训练完毕，如何将最后的结果合并成一个最终的结果</strong></p>
-<p><strong>Bagging和Blending的主要区别就是体现在元模型的结构上，前者是同构的，后者是异构的</strong></p>
+<p><strong>Bagging、Blending、Boosting发生在元模型训练阶段，都是元模型训练的一些策略</strong><br><strong>Stacking发生在模型融合阶段，就是当元模型都训练完毕，如何将最后的结果合并成一个最终的结果</strong><br><strong>Bagging和Blending的主要区别就是体现在元模型的结构上，前者是同构的，后者是异构的</strong></p>
 <p><strong>强调一点，Boosting本身就是元模型的线性组合，不存在融合策略，这个很容易理解。Adaboost的最终模型就是若干个模型的线性组合</strong></p>
 </blockquote>
 <h3 id="模型融合的目标"><a href="#模型融合的目标" class="headerlink" title="模型融合的目标"></a>模型融合的目标</h3><p>模型融合的终极目标是在不降低单个模型的性能的基础上提高模型之间的多样性，也就是通常说的降低模型的相关性。</p>
@@ -188,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/" data-id="civm10buy0000sqw3mqchvwnk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +220,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -248,7 +245,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Li Ping<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
