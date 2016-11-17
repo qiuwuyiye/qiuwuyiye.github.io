@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,21 +84,12 @@
 
 
 
-<meta name="description" content="[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Bagging、Blending、Boosting and Stacking">
-<meta property="og:url" content="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dare To Think">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Dare To Think">
-<meta property="og:description" content="[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
-<meta property="og:image" content="http://yoursite.com/./images/ensemble.png">
-<meta property="og:updated_time" content="2016-11-17T07:52:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bagging、Blending、Boosting and Stacking">
-<meta name="twitter:description" content="[toc]
-背景模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and">
-<meta name="twitter:image" content="http://yoursite.com/./images/ensemble.png">
+<meta name="twitter:title" content="Dare To Think">
 
 
 
@@ -126,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/17/Bagging、Blending、Boosting and Stackin/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title> Bagging、Blending、Boosting and Stacking | Dare To Think </title>
+  <title> Dare To Think </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -153,7 +144,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,9 +225,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -267,7 +260,10 @@
             
             
               
-                Bagging、Blending、Boosting and Stacking
+                
+                <a class="post-title-link" href="/2016/11/17/Bagging、Blending、Boosting and Stackin/" itemprop="url">
+                  Bagging、Blending、Boosting and Stacking
+                </a>
               
             
           </h1>
@@ -316,7 +312,9 @@
       
 
       
-        <p>[toc]</p>
+        
+          
+            <p>[toc]</p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>模型融合对于提高模型结果是一种非常有效又非常便捷的做法，虽然这个步骤一般发生在最后关头，但是不影响它给广大的参赛者带来一次又一次惊喜。调研Kaggle比赛以来，我一直看到优胜者们三番两次说自己的模型在最后怎么融合，怎么取得了不错的结果。当然融合是很重要，但是再好的融合也离不开单个模型的效果。这个是后话，这里我简要介绍下上面Bagging、Blending、Boosting and Stacking四个概率的区别于联系。</p>
 <h2 id="Ensemble"><a href="#Ensemble" class="headerlink" title="Ensemble"></a>Ensemble</h2><h3 id="融合的优点"><a href="#融合的优点" class="headerlink" title="融合的优点"></a>融合的优点</h3><ul>
 <li>从统计模型的⾓角度来讲,单个模型可能会因为误选导致性能不好</li>
@@ -367,62 +365,41 @@
 <li>参数扰动适合模型参数比较多的情况，采用不同的初始化方式也算是参数扰动的一种，比较适合对初始化很敏感的模型。</li>
 </ul>
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/17/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -430,10 +407,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -453,17 +426,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -509,22 +473,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ensemble"><span class="nav-number">2.</span> <span class="nav-text">Ensemble</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#融合的优点"><span class="nav-number">2.1.</span> <span class="nav-text">融合的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两阶段"><span class="nav-number">2.2.</span> <span class="nav-text">两阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别"><span class="nav-number">2.3.</span> <span class="nav-text">区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bagging"><span class="nav-number">2.3.1.</span> <span class="nav-text">Bagging</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blending"><span class="nav-number">2.3.2.</span> <span class="nav-text">Blending</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boosting"><span class="nav-number">2.3.3.</span> <span class="nav-text">Boosting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stacking"><span class="nav-number">2.3.4.</span> <span class="nav-text">Stacking</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型融合的目标"><span class="nav-number">2.4.</span> <span class="nav-text">模型融合的目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提高模型多样性"><span class="nav-number">2.5.</span> <span class="nav-text">提高模型多样性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#适用场景"><span class="nav-number">2.6.</span> <span class="nav-text">适用场景</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -623,10 +571,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
