@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/images/nmf2.png">
 <meta property="og:image" content="http://yoursite.com/images/nmf1.png">
 <meta property="og:image" content="http://yoursite.com/images/nmf3.png">
-<meta property="og:updated_time" content="2016-12-06T08:50:25.000Z">
+<meta property="og:updated_time" content="2016-12-06T08:52:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nonnegative Matrix Factorization(NMF)实现">
 <meta name="twitter:description" content="NMF&amp;#x5E94;&amp;#x7528;&amp;#x573A;&amp;#x666F;&amp;#x63A8;&amp;#x8350;&amp;#x2003;&amp;#x2003;&amp;#x5728;&amp;#x63A8;&amp;#x8350;&amp;#x5E94;&amp;#x7528;&amp;#x4E2D;&amp;#xFF0C;&amp;#x7528;&amp;#x6237;&amp;#x4EE5;&amp;#x53CA;&amp;#x5546;&amp;#x54C1;&amp;#x7684;&amp;#x5386;&amp;#x53F2;&amp;#x51">
@@ -491,6 +491,7 @@
 </code></pre>
 <h2 id="&#x5B9E;&#x73B0;&#x8981;&#x70B9;"><a href="#&#x5B9E;&#x73B0;&#x8981;&#x70B9;" class="headerlink" title="&#x5B9E;&#x73B0;&#x8981;&#x70B9;"></a>&#x5B9E;&#x73B0;&#x8981;&#x70B9;</h2><h3 id="&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;"><a href="#&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;" class="headerlink" title="&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;"></a>&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;</h3><p>&#x2003;&#x2003;&#x7531;&#x4E8E; NMF &#x662F;&#x4E00;&#x4E2A;&#x975E;&#x51F8;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x627E;&#x5230;&#x4E00;&#x4E2A; local optimal&#x3002;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x503C;&#x7684;&#x9009;&#x53D6;&#x5BF9;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;&#x6BD4;&#x8F83;&#x5927;&#x3002;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x503C;&#x6700;&#x597D;&#x79BB;&#x9884;&#x671F;&#x89E3;&#x6BD4;&#x8F83;&#x8FD1;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x91CD;&#x6784;&#x540E;&#x5E94;&#x5C3D;&#x53EF;&#x80FD;&#x548C;&#x539F;&#x6837;&#x672C;&#x503C;&#x63A5;&#x8FD1;:<br>$$w_i h_j = R_{i,j}$$<br>&#x2003;&#x2003;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x7B56;&#x7565;&#x662F;&#x8BA9;&#x53C2;&#x6570;&#x968F;&#x673A;&#x521D;&#x59CB;&#x503C;&#x91CD;&#x6784;&#x540E;&#x7684;&#x503C;&#x7B49;&#x4E8E; $R$ &#x7684;&#x5747;&#x503C; $\mu$:<br>$$W = DenseMatrix(m, K) \times \sqrt{\frac{\mu}{K}}$$<br>$$H = DenseMatrix(K, n) \times \sqrt{\frac{\mu}{K}}$$</p>
 <h3 id="rmse&#x9707;&#x8361;&#x95EE;&#x9898;"><a href="#RMSE&#x9707;&#x8361;&#x95EE;&#x9898;" class="headerlink" title="RMSE&#x9707;&#x8361;&#x95EE;&#x9898;"></a>RMSE&#x9707;&#x8361;&#x95EE;&#x9898;</h3><p>&#x2003;&#x2003;&#x5728;&#x4F18;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x4E00;&#x4E2A;&#x5B66;&#x4E60;&#x7387;&#x4F1A;&#x5BFC;&#x81F4;loss&#x9707;&#x8361;&#xFF0C;&#x5728;&#x4F18;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x6B65;&#x957F;&#x5B9C;&#x9010;&#x6E10;&#x51CF;&#x5C0F;&#x3002;</p>
+<p>$$learnrate = \frac{lr} { math.sqrt(step)}$$</p>
 
       
     </div>

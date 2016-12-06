@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-06T08:50:25.000Z</updated>
+  <updated>2016-12-06T08:52:47.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/06/NMF%E5%AE%9E%E7%8E%B0/"/>
     <id>http://yoursite.com/2016/12/06/NMF实现/</id>
     <published>2016-12-06T07:05:48.000Z</published>
-    <updated>2016-12-06T08:50:25.000Z</updated>
+    <updated>2016-12-06T08:52:47.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="nmf&#x5E94;&#x7528;&#x573A;&#x666F;"><a href="#NMF&#x5E94;&#x7528;&#x573A;&#x666F;" class="headerlink" title="NMF&#x5E94;&#x7528;&#x573A;&#x666F;"></a>NMF&#x5E94;&#x7528;&#x573A;&#x666F;</h1><h2 id="&#x63A8;&#x8350;"><a href="#&#x63A8;&#x8350;" class="headerlink" title="&#x63A8;&#x8350;"></a>&#x63A8;&#x8350;</h2><p>&#x2003;&#x2003;&#x5728;&#x63A8;&#x8350;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x4EE5;&#x53CA;&#x5546;&#x54C1;&#x7684;&#x5386;&#x53F2;&#x5173;&#x7CFB;&#x76F8;&#x5F53;&#x4E8E;&#x5927;&#x578B;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x5206;&#x89E3;&#x540E;&#x7684;&#x77E9;&#x9635;W&#x4EE5;&#x53CA;H&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x7528;&#x6237;&#x4EE5;&#x53CA;&#x5546;&#x54C1;&#x5728;&#x5174;&#x8DA3;&#x7EF4;&#x5EA6;&#x7684;&#x8868;&#x8FBE;&#xFF0C;&#x6839;&#x636E;&#x5206;&#x89E3;&#x540E;&#x7684;&#x77E9;&#x9635;&#x53EF;&#x4EE5;&#x9884;&#x6D4B;&#x672A;&#x77E5;&#x7684;&#x7528;&#x6237;&#x5546;&#x54C1;&#x7684;&#x6253;&#x5206;&#x60C5;&#x51B5;&#x3002;&#x5728;Netflix&#x7ADE;&#x8D5B;&#x4E2D;&#xFF0C; Bellkor&#x2019;s Pragmatic Chaos &#x91C7;&#x7528;&#x8BE5;&#x7B97;&#x6CD5;&#x53D6;&#x5F97;&#x4E86; RMSE&#xFF1A; 0.856704&#x7684;&#x597D;&#x6210;&#x7EE9;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;&#x539F;&#x6765;&#x7684;&#x7B97;&#x6CD5;Cinematch&#x6548;&#x679C;&#x63D0;&#x5347;&#x4E86;10.06%&#x3002;</p>
 <p><img src="/images/nmf2.png" width="400" height="200" alt="name" align="center"></p>
@@ -166,6 +166,7 @@
 </code></pre>
 <h2 id="&#x5B9E;&#x73B0;&#x8981;&#x70B9;"><a href="#&#x5B9E;&#x73B0;&#x8981;&#x70B9;" class="headerlink" title="&#x5B9E;&#x73B0;&#x8981;&#x70B9;"></a>&#x5B9E;&#x73B0;&#x8981;&#x70B9;</h2><h3 id="&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;"><a href="#&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;" class="headerlink" title="&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;"></a>&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;</h3><p>&#x2003;&#x2003;&#x7531;&#x4E8E; NMF &#x662F;&#x4E00;&#x4E2A;&#x975E;&#x51F8;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x627E;&#x5230;&#x4E00;&#x4E2A; local optimal&#x3002;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x503C;&#x7684;&#x9009;&#x53D6;&#x5BF9;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;&#x6BD4;&#x8F83;&#x5927;&#x3002;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x503C;&#x6700;&#x597D;&#x79BB;&#x9884;&#x671F;&#x89E3;&#x6BD4;&#x8F83;&#x8FD1;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x91CD;&#x6784;&#x540E;&#x5E94;&#x5C3D;&#x53EF;&#x80FD;&#x548C;&#x539F;&#x6837;&#x672C;&#x503C;&#x63A5;&#x8FD1;:<br>$$w_i h_j = R_{i,j}$$<br>&#x2003;&#x2003;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x7B56;&#x7565;&#x662F;&#x8BA9;&#x53C2;&#x6570;&#x968F;&#x673A;&#x521D;&#x59CB;&#x503C;&#x91CD;&#x6784;&#x540E;&#x7684;&#x503C;&#x7B49;&#x4E8E; $R$ &#x7684;&#x5747;&#x503C; $\mu$:<br>$$W = DenseMatrix(m, K) \times \sqrt{\frac{\mu}{K}}$$<br>$$H = DenseMatrix(K, n) \times \sqrt{\frac{\mu}{K}}$$</p>
 <h3 id="rmse&#x9707;&#x8361;&#x95EE;&#x9898;"><a href="#RMSE&#x9707;&#x8361;&#x95EE;&#x9898;" class="headerlink" title="RMSE&#x9707;&#x8361;&#x95EE;&#x9898;"></a>RMSE&#x9707;&#x8361;&#x95EE;&#x9898;</h3><p>&#x2003;&#x2003;&#x5728;&#x4F18;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x4E00;&#x4E2A;&#x5B66;&#x4E60;&#x7387;&#x4F1A;&#x5BFC;&#x81F4;loss&#x9707;&#x8361;&#xFF0C;&#x5728;&#x4F18;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x6B65;&#x957F;&#x5B9C;&#x9010;&#x6E10;&#x51CF;&#x5C0F;&#x3002;</p>
+<p>$$learnrate = \frac{lr} { math.sqrt(step)}$$</p>
 ]]></content>
     
     <summary type="html">
